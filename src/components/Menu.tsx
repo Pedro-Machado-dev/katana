@@ -139,8 +139,8 @@ const Menu = () => {
         </motion.div>
 
         <div className="menu__footer">
-          {/* TODO: trocar href pelo link real do iFood / Linktree */}
-          <a href="#pedidos" className="btn btn--primary">
+          {}
+          <a href="https://www.ifood.com.br/delivery/pouso-alegre-mg/restaurante-katana-centro/e861b681-1923-4854-9449-164f49d1ae5d?utm_medium=share" className="btn btn--primary">
             Ver cardápio completo
             <FiArrowRight />
           </a>

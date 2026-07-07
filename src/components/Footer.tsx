@@ -47,7 +47,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/katana.restaurante/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <SiInstagram />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="iFood">
+            <a href="https://www.ifood.com.br/delivery/pouso-alegre-mg/restaurante-katana-centro/e861b681-1923-4854-9449-164f49d1ae5d?utm_medium=share" target="_blank" rel="noopener noreferrer" aria-label="iFood">
               <SiIfood />
             </a>
             <a href="https://linktr.ee/KatanaRestaurante" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
