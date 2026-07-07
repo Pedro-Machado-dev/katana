@@ -77,20 +77,19 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        {/* Painel visual — depois vira foto real do ambiente */}
+        {/* Kanji editorial — sem caixa, com selo hinomaru atrás */}
         <motion.div
           className="about__visual"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
+          <span className="about__hinomaru" aria-hidden="true" />
           <span className="about__visual-kanji" aria-hidden="true">
             和
           </span>
-          <span className="about__visual-caption">
-            和 — harmonia
-          </span>
+          <span className="about__visual-caption">和 — harmonia</span>
         </motion.div>
       </div>
     </section>

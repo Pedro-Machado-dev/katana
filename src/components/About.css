@@ -72,46 +72,61 @@
   max-width: 380px;
 }
 
-/* Painel visual */
+/* ============================================
+   VISUAL — kanji editorial, sem caixa
+   ============================================ */
 .about__visual {
   position: relative;
-  min-height: 320px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background: radial-gradient(
-      120% 100% at 70% 20%,
-      #1f110f 0%,
-      var(--color-surface) 70%
-    );
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  min-height: 340px;
+  padding: 2rem 0;
+}
+
+/* Selo circular vermelho (hinomaru) atrás do kanji */
+.about__hinomaru {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  width: clamp(240px, 30vw, 380px);
+  height: clamp(240px, 30vw, 380px);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--color-red-soft) 0%,
+    transparent 68%
+  );
+  z-index: 0;
 }
 
 .about__visual-kanji {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(9rem, 22vw, 15rem);
+  font-size: clamp(11rem, 28vw, 20rem);
   line-height: 1;
   color: var(--color-red);
-  opacity: 0.85;
+  text-shadow: 0 8px 40px rgba(212, 35, 47, 0.25);
 }
 
 .about__visual-caption {
   position: absolute;
-  bottom: 1.4rem;
-  right: 1.6rem;
+  bottom: 0.6rem;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 2;
   font-family: var(--font-body);
   font-size: 0.72rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--color-text-muted);
+  white-space: nowrap;
 }
 
-/* ============================================
-   DESKTOP
-   ============================================ */
+/* DESKTOP  */
 @media (min-width: 900px) {
   .about__inner {
     grid-template-columns: 1.15fr 0.85fr;
@@ -120,5 +135,10 @@
 
   .about__visual {
     min-height: 460px;
+  }
+
+  .about__visual-caption {
+    right: 1rem;
+    transform: none;
   }
 }
