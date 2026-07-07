@@ -54,8 +54,8 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* TODO: trocar href pelo link real do iFood (Linktree do Katana) */}
-        <a href="#pedidos" className="btn btn--primary navbar__cta">
+        {}
+        <a href="https://www.ifood.com.br/delivery/pouso-alegre-mg/restaurante-katana-centro/e861b681-1923-4854-9449-164f49d1ae5d?utm_medium=share" className="btn btn--primary navbar__cta">
           Peça Online
         </a>
 

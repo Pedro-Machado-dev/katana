@@ -1,5 +1,6 @@
 import { SiInstagram, SiIfood } from "react-icons/si";
-import { FiLink } from "react-icons/fi";
+import { FiLink, FiCode } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
 const navLinks = [
@@ -10,6 +11,10 @@ const navLinks = [
   { label: "Localização", href: "#localizacao" },
   { label: "Contato", href: "#contato" },
 ];
+
+// TODO: cole a URL real do seu LinkedIn aqui
+const PORTFOLIO_URL = "https://pedromachado.dev";
+const LINKEDIN_URL = "https://www.linkedin.com/in/pedro-machado-dev/";
 
 const Footer = () => {
   return (
@@ -42,7 +47,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/katana.restaurante/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <SiInstagram />
             </a>
-            <a href="https://www.ifood.com.br/delivery/pouso-alegre-mg/restaurante-katana-centro/e861b681-1923-4854-9449-164f49d1ae5d?utm_medium=share" target="_blank" rel="noopener noreferrer" aria-label="iFood">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="iFood">
               <SiIfood />
             </a>
             <a href="https://linktr.ee/KatanaRestaurante" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
@@ -55,7 +60,16 @@ const Footer = () => {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p>© {new Date().getFullYear()} Katana · Restaurante do Japão. Todos os direitos reservados.</p>
-          <p className="footer__credit">Rua Adalberto Ferraz, 341 — Pouso Alegre, MG</p>
+
+          <div className="footer__signature">
+            <a className="footer__signature-link" href={PORTFOLIO_URL} target="_blank" rel="noopener noreferrer">
+              <FiCode className="footer__signature-icon" aria-hidden="true" />
+              <span>Desenvolvido por <strong>Pedro Machado</strong></span>
+            </a>
+            <a className="footer__signature-social" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Pedro Machado">
+              <FaLinkedinIn />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
