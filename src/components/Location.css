@@ -1,0 +1,142 @@
+.location {
+  position: relative;
+  padding-block: var(--space-section);
+  background: var(--color-bg);
+}
+
+.location__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.location__header .section-heading {
+  margin-top: 1rem;
+}
+
+.location__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* Infos */
+.location__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.location__block {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+
+.location__block-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--color-red-soft);
+  color: var(--color-red);
+  font-size: 1.4rem;
+}
+
+.location__block-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.location__block-text {
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+/* Horários */
+.location__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.3rem;
+}
+
+.location__hour {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 0.8rem;
+  align-items: baseline;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.location__hour:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.location__hour-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-red);
+}
+
+.location__hour-day {
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.location__hour-time {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.location__cta {
+  align-self: flex-start;
+}
+
+/* Mapa */
+.location__map {
+  position: relative;
+  min-height: 340px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.location__map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* Deixa o mapa combinar com o tema escuro */
+  filter: grayscale(0.3) contrast(1.05) brightness(0.92);
+}
+
+/* DESKTOP  */
+@media (min-width: 900px) {
+  .location__grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3.5rem;
+  }
+
+  .location__map {
+    min-height: 480px;
+  }
+}

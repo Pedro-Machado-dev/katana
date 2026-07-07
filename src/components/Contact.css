@@ -1,0 +1,126 @@
+.contact {
+  position: relative;
+  padding-block: var(--space-section);
+  background: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.contact__kanji {
+  position: absolute;
+  top: 50%;
+  right: -4vw;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(18rem, 42vw, 34rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-red);
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.contact__header .section-heading {
+  margin-top: 1rem;
+}
+
+.contact__subtitle {
+  margin-top: 1.2rem;
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
+  max-width: 480px;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: transform var(--transition), border-color var(--transition),
+    background var(--transition);
+}
+
+.contact__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-red);
+  background: var(--color-surface-2);
+}
+
+.contact__card--featured {
+  border-color: var(--color-red);
+  background: linear-gradient(
+    120% 100% at 0% 0%,
+    var(--color-red-soft) 0%,
+    var(--color-surface) 60%
+  );
+}
+
+.contact__card-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius);
+  background: var(--color-red-soft);
+  color: var(--color-red);
+  font-size: 1.7rem;
+}
+
+.contact__card-body {
+  flex: 1;
+}
+
+.contact__card-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.contact__card-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+}
+
+.contact__card-arrow {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.contact__card:hover .contact__card-arrow {
+  color: var(--color-red);
+  transform: translate(3px, -3px);
+}
+
+/* TABLET E DESKTOP */
+@media (min-width: 720px) {
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

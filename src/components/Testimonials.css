@@ -1,0 +1,123 @@
+.testimonials {
+  position: relative;
+  padding-block: var(--space-section);
+  background: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.testimonials__kanji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(20rem, 45vw, 36rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-red);
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+}
+
+.testimonials__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials__heading {
+  margin-top: 1rem;
+}
+
+.testimonials__stage {
+  position: relative;
+  margin-top: 3rem;
+  max-width: 720px;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials__quote-mark {
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--color-red);
+  opacity: 0.5;
+}
+
+.testimonials__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials__stars {
+  display: flex;
+  gap: 0.3rem;
+  color: var(--color-red);
+  font-size: 1rem;
+  margin-top: 2.4rem;
+}
+
+.testimonials__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.4vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-top: 1.4rem;
+  max-width: 640px;
+}
+
+.testimonials__author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 1.8rem;
+}
+
+.testimonials__author-name {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.testimonials__author-detail {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.testimonials__dots {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 2.4rem;
+}
+
+.testimonials__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.testimonials__dot--active {
+  background: var(--color-red);
+  transform: scale(1.2);
+}
+
+.testimonials__dot:hover {
+  background: var(--color-red-hover);
+}
