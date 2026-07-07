@@ -1,12 +1,12 @@
 <div align="center">
 
-# 刀 Katana · Restaurante do Japão
+# 刀 Katana · Japanese Restaurant
 
-**Site institucional para o único restaurante tradicional japonês do Sul de Minas.**
+**Marketing website for the only traditional Japanese restaurant in southern Minas Gerais, Brazil.**
 
-Uma landing page moderna, elegante e responsiva, desenvolvida para apresentar o restaurante, seu cardápio e canais de pedido — com foco em performance e experiência mobile.
+A modern, elegant, and fully responsive landing page built to showcase the restaurant, its menu, and ordering channels — with a strong focus on performance and mobile experience.
 
-[🌐 Ver site ao vivo](https://restaurantekatana.vercel.app)
+[🌐 Live site](https://restaurantekatana.vercel.app)
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
@@ -18,86 +18,86 @@ Uma landing page moderna, elegante e responsiva, desenvolvida para apresentar o 
 
 ---
 
-## 📖 Sobre o projeto
+## 📖 About
 
-O **Katana** é um restaurante japonês localizado em Pouso Alegre – MG. Este projeto entrega um site comercial completo, pensado para transmitir a identidade da marca — tradicional, elegante e autêntica — e direcionar os visitantes aos canais de pedido (iFood, aiqfome e redes sociais).
+**Katana** is a Japanese restaurant located in Pouso Alegre, Brazil. This project delivers a complete commercial website designed to convey the brand's identity — traditional, elegant, and authentic — and to guide visitors toward the ordering channels (iFood, aiqfome, and social media).
 
-O design parte de uma paleta **preto, vermelho e branco**, tipografia serifada japonesa (*Shippori Mincho*) e um conceito visual de **kanjis decorativos** que surgem conforme o usuário rola a página, reforçando a identidade cultural do restaurante.
-
----
-
-## ✨ Funcionalidades
-
-- **Design responsivo** com abordagem *mobile-first* (celular, tablet, notebook e desktop)
-- **Animações suaves** com Framer Motion (entradas no scroll, menu mobile, transições)
-- **Camada de kanjis dinâmicos** que aparecem progressivamente durante a rolagem
-- **Galeria com lightbox** navegável por teclado (setas e ESC)
-- **Cardápio em destaque** com fotos reais dos pratos
-- **Carrossel de depoimentos** com troca automática
-- **Mapa interativo** de localização (Google Maps embed) com botão de rotas
-- **SEO completo** — meta tags, Open Graph (preview no WhatsApp/redes) e dados estruturados (Schema.org)
-- **Acessibilidade** — labels ARIA, navegação por teclado e respeito a `prefers-reduced-motion`
+The design is built around a **black, red, and white** palette, a Japanese serif typeface (*Shippori Mincho*), and a visual concept of **decorative kanji** that fade in as the user scrolls, reinforcing the restaurant's cultural identity.
 
 ---
 
-## 🛠️ Tecnologias
+## ✨ Features
 
-| Categoria | Ferramentas |
-|-----------|-------------|
+- **Responsive design** with a *mobile-first* approach (phone, tablet, laptop, and desktop)
+- **Smooth animations** with Framer Motion (scroll-triggered reveals, mobile menu, transitions)
+- **Dynamic kanji layer** that fades in progressively while scrolling
+- **Gallery with lightbox**, navigable by keyboard (arrow keys and ESC)
+- **Featured menu** showcasing real photos of the dishes
+- **Auto-playing testimonials carousel**
+- **Interactive location map** (Google Maps embed) with a directions button
+- **Full SEO** — meta tags, Open Graph (WhatsApp/social previews), and structured data (Schema.org)
+- **Accessibility** — ARIA labels, keyboard navigation, and `prefers-reduced-motion` support
+
+---
+
+## 🛠️ Tech stack
+
+| Category | Tools |
+|----------|-------|
 | **Framework** | React 19 |
-| **Linguagem** | TypeScript |
+| **Language** | TypeScript |
 | **Build** | Vite |
-| **Animações** | Framer Motion |
-| **Ícones** | React Icons |
-| **Estilização** | CSS puro (variáveis CSS, Flexbox, Grid) |
-| **Deploy** | Vercel |
+| **Animations** | Framer Motion |
+| **Icons** | React Icons |
+| **Styling** | Plain CSS (custom properties, Flexbox, Grid) |
+| **Deployment** | Vercel |
 
 ---
 
-## 📂 Estrutura do projeto
+## 📂 Project structure
 
 ```
 src/
 ├── components/
-│   ├── Navbar.tsx        # Navegação fixa + menu mobile
-│   ├── Hero.tsx          # Seção principal
-│   ├── About.tsx         # Sobre o restaurante
-│   ├── Menu.tsx          # Cardápio em destaque
-│   ├── Gallery.tsx       # Galeria com lightbox
-│   ├── Testimonials.tsx  # Depoimentos
-│   ├── Location.tsx      # Localização + mapa
-│   ├── Contact.tsx       # Canais de pedido
-│   ├── Footer.tsx        # Rodapé
-│   └── KanjiLayer.tsx    # Kanjis decorativos no scroll
-├── assets/               # Imagens dos pratos
-├── App.tsx               # Composição das seções
-├── index.css             # Tokens de design + estilos globais
-└── main.tsx              # Ponto de entrada
+│   ├── Navbar.tsx        # Fixed navigation + mobile menu
+│   ├── Hero.tsx          # Main hero section
+│   ├── About.tsx         # About the restaurant
+│   ├── Menu.tsx          # Featured menu
+│   ├── Gallery.tsx       # Gallery with lightbox
+│   ├── Testimonials.tsx  # Testimonials
+│   ├── Location.tsx      # Location + map
+│   ├── Contact.tsx       # Ordering channels
+│   ├── Footer.tsx        # Footer
+│   └── KanjiLayer.tsx    # Decorative scroll kanji
+├── assets/               # Dish images
+├── App.tsx               # Section composition
+├── index.css             # Design tokens + global styles
+└── main.tsx              # Entry point
 ```
 
 ---
 
-## 🚀 Como rodar localmente
+## 🚀 Running locally
 
-Pré-requisitos: **Node.js** (versão 18 ou superior) e **npm**.
+Requirements: **Node.js** (version 18 or higher) and **npm**.
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/Pedro-Machado-dev/katana.git
 
-# Entre na pasta
+# Enter the folder
 cd katana
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Rode o servidor de desenvolvimento
+# Start the development server
 npm run dev
 ```
 
-O site estará disponível em `http://localhost:5173`.
+The site will be available at `http://localhost:5173`.
 
-Para gerar a build de produção:
+To generate a production build:
 
 ```bash
 npm run build
@@ -105,19 +105,19 @@ npm run build
 
 ---
 
-## 🎨 Decisões de design
+## 🎨 Design decisions
 
-- **Paleta preto/vermelho/branco** — inspirada na identidade visual real do restaurante, remete à tradição japonesa e ao contraste elegante do fine dining.
-- **Kanjis progressivos** — em vez de imagens genéricas, o site usa caracteres japoneses (刀 食 和 麺 味) como elementos decorativos que aparecem durante a rolagem, criando movimento sem poluição visual.
-- **Mobile-first** — todo o layout foi construído primeiro para o celular e depois adaptado para telas maiores, já que o público-alvo acessa majoritariamente pelo smartphone.
+- **Black/red/white palette** — inspired by the restaurant's real visual identity, evoking Japanese tradition and the elegant contrast of fine dining.
+- **Progressive kanji** — instead of generic imagery, the site uses Japanese characters (刀 食 和 麺 味) as decorative elements that appear during scroll, adding movement without visual clutter.
+- **Mobile-first** — the entire layout was built for mobile first and then scaled up to larger screens, since the target audience primarily browses on smartphones.
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
-Desenvolvido por **Pedro Machado**
+Developed by **Pedro Machado**
 
-[![Portfólio](https://img.shields.io/badge/Portfólio-000000?style=flat&logo=vercel&logoColor=white)](https://pedromachado.dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://pedromachado.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-machado-dev/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Pedro-Machado-dev)
 
@@ -125,6 +125,6 @@ Desenvolvido por **Pedro Machado**
 
 <div align="center">
 
-Feito com dedicação para o **Restaurante Katana** · Pouso Alegre, MG
+Built with care for **Katana Restaurant** · Pouso Alegre, Brazil
 
 </div>
