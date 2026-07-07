@@ -37,7 +37,7 @@
 
 .menu__card-media {
   position: relative;
-  height: 170px;
+  height: 210px;
   background: radial-gradient(
     120% 100% at 70% 20%,
     #241813 0%,
@@ -49,6 +49,21 @@
   overflow: hidden;
 }
 
+/* Foto do prato */
+.menu__card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.menu__card:hover .menu__card-img {
+  transform: scale(1.06);
+}
+
+/* Kanji (quando não há foto) */
 .menu__card-kanji {
   font-family: var(--font-display);
   font-size: 4.5rem;
@@ -126,7 +141,9 @@
   margin-top: 3rem;
 }
 
-/* TABLET E DESKTOP  */
+/* ============================================
+   TABLET E DESKTOP
+   ============================================ */
 @media (min-width: 620px) {
   .menu__grid {
     grid-template-columns: repeat(2, 1fr);

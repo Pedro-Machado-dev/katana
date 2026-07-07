@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import "./Menu.css";
 
+import lamen from "../assets/lamen.jpg";
+import tempura from "../assets/tempura.jpg";
+import onigiri from "../assets/onigiri.jpg";
+import guioza from "../assets/guioza.jpg";
+import donburi from "../assets/donburi.jpg";
+import udon from "../assets/udon.jpg";
+
 interface Dish {
   name: string;
   jp: string;
@@ -9,6 +16,7 @@ interface Dish {
   price: string;
   kanji: string;
   badge?: string;
+  src?: string;
 }
 
 // TODO: dono confirma nomes, descrições e preços reais
@@ -20,6 +28,7 @@ const dishes: Dish[] = [
     price: "R$ 60",
     kanji: "麺",
     badge: "Destaque da Quinta",
+    src: lamen,
   },
   {
     name: "Donburi",
@@ -27,6 +36,7 @@ const dishes: Dish[] = [
     description: "Tigela de arroz coberta com carne, cebolinha e ovo.",
     price: "R$ 45",
     kanji: "丼",
+    src: donburi,
   },
   {
     name: "Tempurá",
@@ -34,6 +44,7 @@ const dishes: Dish[] = [
     description: "Camarão e legumes empanados em massa leve e crocante.",
     price: "R$ 38",
     kanji: "天",
+    src: tempura,
   },
   {
     name: "Udon",
@@ -41,6 +52,7 @@ const dishes: Dish[] = [
     description: "Macarrão grosso em caldo suave, no ponto perfeito.",
     price: "R$ 42",
     kanji: "麺",
+    src: udon,
   },
   {
     name: "Onigiri",
@@ -48,6 +60,7 @@ const dishes: Dish[] = [
     description: "Bolinho de arroz recheado, envolto em alga nori.",
     price: "R$ 18",
     kanji: "米",
+    src: onigiri
   },
   {
     name: "Guioza",
@@ -55,6 +68,7 @@ const dishes: Dish[] = [
     description: "Pastéis japoneses grelhados, recheio suculento.",
     price: "R$ 30",
     kanji: "餃",
+    src: guioza,
   },
 ];
 
@@ -97,10 +111,18 @@ const Menu = () => {
                 {dish.badge && (
                   <span className="menu__badge">{dish.badge}</span>
                 )}
-                {/* TODO: trocar por <img> com a foto real do prato */}
+                {dish.src ? (
+                  <img
+                    className="menu__card-img"
+                    src={dish.src}
+                    alt={dish.name}
+                    loading="lazy"
+                  />
+                ) : ( 
                 <span className="menu__card-kanji" aria-hidden="true">
                   {dish.kanji}
                 </span>
+                )}
               </div>
 
               <div className="menu__card-body">

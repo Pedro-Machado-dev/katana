@@ -3,20 +3,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "./Gallery.css";
 
+import lamen from "../assets/lamen.jpg";
+import tempura from "../assets/tempura.jpg";
+import onigiri from "../assets/onigiri.jpg";
+import guioza from "../assets/guioza.jpg";
+import donburi from "../assets/donburi.jpg";
+
 interface GalleryItem {
   kanji: string;
   label: string;
   size: "tall" | "wide" | "normal";
+  src?: string; // opcional: quando não houver foto, mostra o kanji
 }
 
-// TODO: trocar cada item por uma foto real em src/assets/ (campo "src")
+// TODO: adicionar as fotos que faltam (donburi, ambiente, bebidas, salão)
 const items: GalleryItem[] = [
-  { kanji: "麺", label: "Lámen artesanal", size: "tall" },
-  { kanji: "丼", label: "Donburi da casa", size: "normal" },
-  { kanji: "天", label: "Tempurá crocante", size: "normal" },
+  { kanji: "麺", label: "Lámen artesanal", size: "tall", src: lamen },
+  { kanji: "丼", label: "Donburi da casa", size: "normal", src: donburi },
+  { kanji: "天", label: "Tempurá crocante", size: "normal", src: tempura },
   { kanji: "寿", label: "Ambiente", size: "wide" },
-  { kanji: "米", label: "Onigiri", size: "normal" },
-  { kanji: "餃", label: "Guioza grelhada", size: "tall" },
+  { kanji: "米", label: "Onigiri", size: "normal", src: onigiri },
+  { kanji: "餃", label: "Guioza grelhada", size: "tall", src: guioza },
   { kanji: "茶", label: "Bebidas típicas", size: "normal" },
   { kanji: "和", label: "Nosso salão", size: "wide" },
 ];
@@ -36,7 +43,6 @@ const Gallery = () => {
     );
   }, []);
 
-  // Navegação por teclado no lightbox
   useEffect(() => {
     if (openIndex === null) return;
 
@@ -54,6 +60,8 @@ const Gallery = () => {
       document.body.style.overflow = "";
     };
   }, [openIndex, close, next, prev]);
+
+  const openItem = openIndex !== null ? items[openIndex] : null;
 
   return (
     <section className="gallery" id="galeria">
@@ -89,10 +97,18 @@ const Gallery = () => {
               }}
               aria-label={`Ver ${item.label}`}
             >
-              {/* TODO: trocar por <img src={...} alt={item.label} /> */}
-              <span className="gallery__item-kanji" aria-hidden="true">
-                {item.kanji}
-              </span>
+              {item.src ? (
+                <img
+                  className="gallery__item-img"
+                  src={item.src}
+                  alt={item.label}
+                  loading="lazy"
+                />
+              ) : (
+                <span className="gallery__item-kanji" aria-hidden="true">
+                  {item.kanji}
+                </span>
+              )}
               <span className="gallery__item-label">{item.label}</span>
             </motion.button>
           ))}
@@ -101,7 +117,7 @@ const Gallery = () => {
 
       {/* Lightbox */}
       <AnimatePresence>
-        {openIndex !== null && (
+        {openItem && (
           <motion.div
             className="gallery__lightbox"
             initial={{ opacity: 0 }}
@@ -137,13 +153,18 @@ const Gallery = () => {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               key={openIndex}
             >
-              {/* TODO: trocar por <img> da foto ampliada */}
-              <span className="gallery__lightbox-kanji" aria-hidden="true">
-                {items[openIndex].kanji}
-              </span>
-              <span className="gallery__lightbox-label">
-                {items[openIndex].label}
-              </span>
+              {openItem.src ? (
+                <img
+                  className="gallery__lightbox-img"
+                  src={openItem.src}
+                  alt={openItem.label}
+                />
+              ) : (
+                <span className="gallery__lightbox-kanji" aria-hidden="true">
+                  {openItem.kanji}
+                </span>
+              )}
+              <span className="gallery__lightbox-label">{openItem.label}</span>
             </motion.div>
 
             <button
