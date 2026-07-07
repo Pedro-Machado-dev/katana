@@ -51,8 +51,8 @@ const Hero = () => {
         </motion.p>
 
         <motion.div className="hero__actions" variants={item}>
-          {/* TODO: trocar href pelo link real do iFood (Linktree do Katana) */}
-          <a href="#pedidos" className="btn btn--primary">
+          {}
+          <a href="https://www.ifood.com.br/delivery/pouso-alegre-mg/restaurante-katana-centro/e861b681-1923-4854-9449-164f49d1ae5d?utm_medium=share" className="btn btn--primary">
             <SiIfood />
             Peça pelo iFood
           </a>
