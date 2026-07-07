@@ -1,0 +1,140 @@
+.menu {
+  position: relative;
+  padding-block: var(--space-section);
+  background: var(--color-bg-alt);
+}
+
+.menu__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.menu__header .section-heading {
+  margin-top: 1rem;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+/* Card */
+.menu__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.menu__card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-red);
+}
+
+.menu__card-media {
+  position: relative;
+  height: 170px;
+  background: radial-gradient(
+    120% 100% at 70% 20%,
+    #241813 0%,
+    #120c0b 70%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu__card-kanji {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--color-red);
+  opacity: 0.18;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.menu__card:hover .menu__card-kanji {
+  transform: scale(1.12);
+  opacity: 0.28;
+}
+
+.menu__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: var(--color-red);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.menu__card-body {
+  padding: 1.2rem 1.3rem 1.4rem;
+}
+
+.menu__card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.menu__card-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.menu__card-jp {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-left: 0.2rem;
+}
+
+.menu__card-price {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-red);
+  white-space: nowrap;
+}
+
+.menu__card-desc {
+  margin-top: 0.6rem;
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.menu__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* TABLET E DESKTOP  */
+@media (min-width: 620px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .menu__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

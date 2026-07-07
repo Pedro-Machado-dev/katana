@@ -13,3 +13,13 @@ main {
     transparent
   );
 }
+
+.page {
+  position: relative;
+}
+
+/* Garante que o conteúdo das seções fique acima da camada de kanjis */
+main {
+  position: relative;
+  z-index: 1;
+}

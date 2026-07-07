@@ -1,0 +1,33 @@
+.kanji-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.kanji-layer__char {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-red);
+  user-select: none;
+  will-change: opacity, transform;
+}
+
+.kanji-layer__char--left {
+  left: -1.5vw;
+}
+
+.kanji-layer__char--right {
+  right: -1.5vw;
+}
+
+/* No celular os kanjis ficam menores e mais discretos */
+@media (max-width: 700px) {
+  .kanji-layer__char {
+    font-size: 12rem !important;
+    opacity: 0.04;
+  }
+}
