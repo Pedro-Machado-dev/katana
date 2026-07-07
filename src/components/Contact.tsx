@@ -12,20 +12,19 @@ interface Channel {
   featured?: boolean;
 }
 
-// TODO: colar os links REAIS do Linktree do Katana em cada "href"
 const channels: Channel[] = [
   {
     icon: <SiIfood />,
     name: "iFood",
     description: "Peça delivery com entrega rápida",
-    href: "#",
+    href: "https://www.ifood.com.br/delivery/pouso-alegre-mg/restaurante-katana-centro/e861b681-1923-4854-9449-164f49d1ae5d?utm_medium=share",
     featured: true,
   },
   {
     icon: <IoFastFoodOutline />,
     name: "aiqfome",
     description: "Também disponível para pedidos",
-    href: "#",
+    href: "https://aiqfome.com/MG/pouso-alegre/restaurante-katana",
   },
   {
     icon: <SiInstagram />,
