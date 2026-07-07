@@ -1,0 +1,149 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+  isolation: isolate;
+}
+
+/* Fundo base (será substituído por foto depois) */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background: radial-gradient(
+      120% 90% at 80% 10%,
+      #1a0f0e 0%,
+      var(--color-bg) 55%
+    ),
+    var(--color-bg);
+}
+
+/* Glow vermelho */
+.hero__glow {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 55vw;
+  height: 55vw;
+  max-width: 720px;
+  max-height: 720px;
+  z-index: -2;
+  background: radial-gradient(
+    circle,
+    var(--color-red-soft) 0%,
+    transparent 65%
+  );
+  filter: blur(20px);
+}
+
+/* Kanji gigante decorativo */
+.hero__kanji {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: -6vw;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(20rem, 55vw, 48rem);
+  line-height: 1;
+  color: var(--color-red);
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Conteúdo */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 760px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  margin-top: 1.5rem;
+  color: var(--color-text);
+}
+
+.hero__title em {
+  font-style: normal;
+  color: var(--color-red);
+}
+
+.hero__subtitle {
+  max-width: 520px;
+  margin-top: 1.6rem;
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.6rem;
+}
+
+/* Indicador de scroll */
+.hero__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 2.2rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-red),
+    transparent
+  );
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.hero__scroll-label {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scaleY(0.7);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+/* Esconde o indicador em telas baixas (celular deitado) */
+@media (max-height: 640px) {
+  .hero__scroll {
+    display: none;
+  }
+}
