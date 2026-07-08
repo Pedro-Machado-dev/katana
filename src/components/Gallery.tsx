@@ -7,7 +7,7 @@ import lamen from "../assets/lamen.jpg";
 import tempura from "../assets/tempura.jpg";
 import onigiri from "../assets/onigiri.jpg";
 import guioza from "../assets/guioza.jpg";
-import donburi from "../assets/donburi.jpg";
+import combo from "../assets/Combo.jpg";
 
 interface GalleryItem {
   kanji: string;
@@ -19,7 +19,7 @@ interface GalleryItem {
 // TODO: adicionar as fotos que faltam (donburi, ambiente, bebidas, salão)
 const items: GalleryItem[] = [
   { kanji: "麺", label: "Lámen artesanal", size: "tall", src: lamen },
-  { kanji: "丼", label: "Donburi da casa", size: "normal", src: donburi },
+  { kanji: "組", label: "Katana Udon Combo", size: "normal", src: combo },
   { kanji: "天", label: "Tempurá crocante", size: "normal", src: tempura },
   { kanji: "寿", label: "Ambiente", size: "wide" },
   { kanji: "米", label: "Onigiri", size: "normal", src: onigiri },

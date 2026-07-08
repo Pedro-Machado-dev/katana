@@ -60,7 +60,7 @@ const About = () => {
           </motion.p>
 
           <motion.p className="about__paragraph" variants={fadeUp}>
-            Do lámen fumegante ao donburi caprichado, cada prato carrega a
+            Do lámen fumegante ao onigiri caprichado, cada prato carrega a
             filosofia de que sabor e tradição estão em cada detalhe.
           </motion.p>
 
@@ -77,7 +77,7 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        {/* Kanji editorial — sem caixa, com selo hinomaru atrás */}
+        {}
         <motion.div
           className="about__visual"
           initial={{ opacity: 0, y: 30 }}

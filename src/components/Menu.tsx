@@ -6,7 +6,7 @@ import lamen from "../assets/lamen.jpg";
 import tempura from "../assets/tempura.jpg";
 import onigiri from "../assets/onigiri.jpg";
 import guioza from "../assets/guioza.jpg";
-import donburi from "../assets/donburi.jpg";
+import combo from "../assets/Combo.jpg";
 import udon from "../assets/udon.jpg";
 
 interface Dish {
@@ -31,12 +31,12 @@ const dishes: Dish[] = [
     src: lamen,
   },
   {
-    name: "Donburi",
-    jp: "丼",
-    description: "Tigela de arroz coberta com carne, cebolinha e ovo.",
-    price: "R$ 53",
-    kanji: "丼",
-    src: donburi,
+    name: "Katana Udon Combo",
+    jp: "組",
+    description: "Perfeito para quem quer provar diferentes sabores do Japão!",
+    price: "R$ 52",
+    kanji: "組",
+    src: combo,
   },
   {
     name: "Tempurá",

@@ -46,7 +46,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p className="hero__subtitle" variants={item}>
-          A autêntica cozinha japonesa em Pouso Alegre. Lámen, donburi,
+          A autêntica cozinha japonesa em Pouso Alegre. Lámen, udon,
           tempurá e pratos preparados com respeito à tradição.
         </motion.p>
 
